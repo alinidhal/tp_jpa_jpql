@@ -11,10 +11,10 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
 		<class>fr.diginamic.Realisateur</class>
 		<class>fr.diginamic.Role</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/movie_db" />
-			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="" />
-			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://begu2up1xid5gnwrzyuc-mysql.services.clever-cloud.com:3306/begu2up1xid5gnwrzyuc" />
+			<property name="javax.persistence.jdbc.user" value="uqdoszn0r1uy1fdm" />
+			<property name="javax.persistence.jdbc.password" value="81giIEmdn1wcSppD00HW" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="hibernate.show_sql" value="true" />
 		</properties>
 	</persistence-unit>

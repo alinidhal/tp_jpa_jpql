@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ROLE")
+@Table(name="role")
 public class Role {
 
 	@Id
@@ -20,11 +20,11 @@ public class Role {
 	private String nom;
 	
 	@ManyToOne
-	@JoinColumn(name="ID_FILM")
+	@JoinColumn(name="id_film")
 	private Film film;
 	
 	@ManyToOne
-	@JoinColumn(name="ID_ACTEUR")
+	@JoinColumn(name="id_acteur")
 	private Acteur acteur;
 	
 	public Role() {

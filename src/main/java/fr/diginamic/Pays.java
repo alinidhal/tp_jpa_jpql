@@ -1,17 +1,21 @@
 package fr.diginamic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Entity
-@Table(name="PAYS")
+@Table(name="pays")
 public class Pays {
 
 	@Id
@@ -28,6 +32,9 @@ public class Pays {
 		this.nom = nom;
 	}
 	
+	@ManyToMany(mappedBy = "pays")
+	private List<Film> film = new ArrayList<Film>();
+	
 	@Override
 	public int hashCode() {
 		return new HashCodeBuilder().append(nom).toHashCode();
@@ -42,6 +49,12 @@ public class Pays {
 		return new EqualsBuilder().append(nom, autre.getNom()).isEquals();
 	}
 	
+	public List<Film> getFilm() {
+		return film;
+	}
+	public void setFilm(List<Film> film) {
+		this.film = film;
+	}
 	/** Getter
 	 * @return the id
 	 */
